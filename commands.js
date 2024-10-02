@@ -12,16 +12,13 @@ function sayHello(event) {
 }
 
 Office.onReady(() => {
-    Office.addin.setStartupBehavior(Office.StartupBehavior.load);
-    Office.actions.associate("openLink", openLink);
+    Office.actions.associate("openCria", openCria);
     Office.actions.associate("findAbbrevs", findAbbrevs);
 });
 
 
-
-
 function openCria() {
-    window.open('https://www.cria.fiecon.com', '_blank');
+    window.open('https://cria.fiecon.com/', '_blank');
 }
 
 
@@ -46,23 +43,3 @@ function findAbbrevs() {
         app.showNotification('Error:', 'Reading selection data is not supported by this host application.');
     }
 }
-
-
-async function clearMessage(callback) {
-    document.getElementById("message").innerText = "";
-    await callback();
-  }
-  
-  function setMessage(message) {
-    document.getElementById("message").innerText = message;
-  }
-  
-  // Default helper for invoking an action and handling errors.
-  async function tryCatch(callback) {
-    try {
-      document.getElementById("message").innerText = "";
-      await callback();
-    } catch (error) {
-      setMessage("Error: " + error.toString());
-    }
-  }
