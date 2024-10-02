@@ -10,7 +10,7 @@ function openCria(event) {
 }
 
 
-function findAbbrevs(event) {
+function helloWorld(event) {
     Office.context.document.setSelectedDataAsync(
         "Hello World!",
         function (asyncResult) {
@@ -19,5 +19,12 @@ function findAbbrevs(event) {
             }
         }
     );
+    event.completed();
+}
+
+
+
+
+function findAbbrevs(event) {
     event.completed();
 }
