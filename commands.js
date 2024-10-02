@@ -4,7 +4,7 @@ Office.onReady(() => {
 });
 
 
-export function openCria(event) {
+function openCria(event) {
     window.open('https://cria.fiecon.com/', '_blank');
     event.completed();
 }
