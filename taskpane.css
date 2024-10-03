@@ -33,7 +33,7 @@ p {
     margin-bottom: 20px;
     font-size: 14px;
 }
-.button {
+.link-btn {
     display: block;
     width: 200px;
     margin: 0 auto 20px;
@@ -41,12 +41,13 @@ p {
     background-color: #df4114;
     color: white;
     text-align: center;
-    text-decoration: none;
     border-radius: 25px;
     font-size: 18px;
     transition: background-color 0.3s ease;
+    border: none; /* Removes the bevel/outline */
+    cursor: pointer; /* Updates cursor on hover */
 }
-.button:hover {
+.link-btn:hover {
     background-color: #c73a10;
 }
 .card-container {
